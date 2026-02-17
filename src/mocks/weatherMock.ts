@@ -1,6 +1,6 @@
 import type { Weather } from '../types/weather';
 
-export const mockWeahter = {
+export const mockWeahter: Weather = {
   city: 'Seoul',
   temperature: 5,
   condition: 'Cloudy',
