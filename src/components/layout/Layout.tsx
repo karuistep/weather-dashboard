@@ -1,12 +1,15 @@
 import { Outlet } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
 
 export default function Layout() {
   return (
     <>
-      <header>Weather dashboard header</header>
+      <Header />
       <main>
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 }
