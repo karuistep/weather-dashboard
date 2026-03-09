@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import { SearchBar } from '../../components/weather/SearchBar';
 import { WeatherCard } from '../../components/weather/WeatherCard';
-import { mockWeahter } from '../../mocks/weatherMock';
 import { fetchWeather } from '../../services/weatherApi';
 import { mapWeatherResponseToWeather } from '../../services/weather.mapper';
 import type { Weather } from '../../types/weather';
 
-export default function Home() {
+const Home = () => {
   const [weather, setWeather] = useState<Weather | null>(null);
 
   useEffect(() => {
@@ -28,4 +27,6 @@ export default function Home() {
       {weather && <WeatherCard weather={weather} />}
     </div>
   );
-}
+};
+
+export default Home;
