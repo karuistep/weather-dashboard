@@ -3,6 +3,15 @@ export interface Weather {
   temperature: number;
   condition: string;
   humidity: number;
+
+  feelsLike: number;
+  windSpeed?: number;
+  pressure: number;
+  visibility?: number;
+  cloudiness?: number;
+
+  sunrise?: number;
+  sunset?: number;
 }
 
 export interface WeatherResponse {

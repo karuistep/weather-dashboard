@@ -8,10 +8,9 @@ const SearchResult = () => {
   const { data, isLoading, isError } = useWeather(city || '');
 
   if (isLoading) return <div>Loading...</div>;
-  if (!city || isError || !data || Object.keys(data).length === 0)
-    return <NoData />;
+  if (!city || isError || !data) return <NoData />;
 
-  return <div>Search Result for {city}</div>;
+  return <div>Search Result for {data.city}</div>;
 };
 
 export default SearchResult;
