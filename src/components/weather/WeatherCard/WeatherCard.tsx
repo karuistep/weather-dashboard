@@ -1,4 +1,4 @@
-import type { Weather } from '../../types/weather';
+import type { Weather } from '../../../types/weather';
 
 type Props = {
   weather: Weather;

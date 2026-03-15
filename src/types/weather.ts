@@ -1,17 +1,35 @@
 export interface Weather {
   city: string;
-  temperature: number;
-  condition: string;
-  humidity: number;
+  country?: string;
 
+  lat?: number;
+  lon?: number;
+
+  temperature: number;
   feelsLike: number;
-  windSpeed?: number;
+  tempMin?: number;
+  tempMax?: number;
+
+  condition: string;
+
+  humidity: number;
   pressure: number;
+  seaLevelPressure?: number;
+  groundLevelPressure?: number;
+
+  windSpeed?: number;
+  windDirection?: number;
+
   visibility?: number;
   cloudiness?: number;
 
   sunrise?: number;
   sunset?: number;
+
+  localTime?: number;
+
+  stationId?: number;
+  stationIndex?: number;
 }
 
 export interface WeatherResponse {
