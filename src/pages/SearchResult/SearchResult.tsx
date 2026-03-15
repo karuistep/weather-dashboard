@@ -1,5 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 import { useWeather } from '../../hooks/useWeather';
+import { SearchBar } from '../../components/SearchBar/SearchBar';
 import NoData from '../../components/NoData';
 
 const SearchResult = () => {
@@ -10,7 +11,12 @@ const SearchResult = () => {
   if (isLoading) return <div>Loading...</div>;
   if (!city || isError || !data) return <NoData />;
 
-  return <div>Search Result for {data.city}</div>;
+  return (
+    <div>
+      <SearchBar />
+      Search Result for {data.city}
+    </div>
+  );
 };
 
 export default SearchResult;
