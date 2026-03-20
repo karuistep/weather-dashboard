@@ -18,7 +18,9 @@ const SearchResult = () => {
     <div className={styles.container}>
       <SearchBar />
       <div className={styles['weather-contents-row']}>
-        <WeatherCard weather={data} />
+        <div className={styles['weather-card-container']}>
+          <WeatherCard weather={data} />
+        </div>
       </div>
     </div>
   );

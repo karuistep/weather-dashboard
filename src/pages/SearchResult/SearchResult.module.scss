@@ -8,5 +8,9 @@
     width: 100%;
     display: flex;
     gap: 32px;
+
+    .weather-card-container {
+      flex: 1;
+    }
   }
 }

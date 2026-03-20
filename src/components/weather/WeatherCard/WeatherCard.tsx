@@ -1,6 +1,7 @@
 import type { Weather } from '../../../types/weather';
-
+import MapPinIcon from '@/assets/Icon/lucide-MapPin-Outlined.svg?react';
 import TempIcon from '../../../assets/Visily-Export-to-Image-cloud-sun-2026-03-20.png';
+
 import styles from './WeatherCard.module.scss';
 
 type Props = {
@@ -12,7 +13,17 @@ export function WeatherCard({ weather }: Props) {
   return (
     <div className={styles.card}>
       <div className={styles['body-left']}>
-        <div className={styles['card-header']}>1</div>
+        <div className={styles['card-header']}>
+          <div className={styles['title-container']}>
+            <div className={styles['city-icon-container']}>
+              <MapPinIcon />
+            </div>
+            <span
+              className={styles['city-name']}
+            >{`${weather.city}, ${weather.country}`}</span>
+          </div>
+          <div className={styles['subtitle-container']}></div>
+        </div>
         <div className={styles['card-body']}>2</div>
         <div className={styles['card-footer']}>3</div>
       </div>
