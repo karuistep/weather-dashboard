@@ -39,7 +39,19 @@ export function WeatherCard({ weather }: Props) {
             </div>
           </div>
         </div>
-        <div className={styles['card-body']}>2</div>
+
+        {/* body(temperature, feels like, high&low condition) */}
+        <div className={styles['card-body']}>
+          <div className={styles['temperature-container']}>
+            <span className={styles['temperature-text']}>
+              {weather.temperature}°
+            </span>
+            <span className={styles['unit-text']}>CELCIUS</span>
+          </div>
+          <div className={styles.divider}></div>
+          <div className={styles['temperature-container']}></div>
+        </div>
+
         <div className={styles['card-footer']}>3</div>
       </div>
       <div className={styles['body-right']}>
