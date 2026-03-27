@@ -1,6 +1,8 @@
 import type { Weather, WeatherResponse } from '../types/weather';
 
 export function mapWeatherResponseToWeather(res: WeatherResponse): Weather {
+  const weather = res.weather[0];
+
   return {
     city: res.name ?? 'Unknown',
     country: res.sys?.country,
@@ -13,7 +15,10 @@ export function mapWeatherResponseToWeather(res: WeatherResponse): Weather {
     tempMin: res.main.temp_min,
     tempMax: res.main.temp_max,
 
-    condition: res.weather[0].main,
+    conditionId: weather.id,
+    condition: weather.main,
+
+    icon: weather.icon,
 
     humidity: res.main.humidity,
     pressure: res.main.pressure,
@@ -30,6 +35,7 @@ export function mapWeatherResponseToWeather(res: WeatherResponse): Weather {
     sunset: res.sys?.sunset,
 
     localTime: res.dt,
+    timezone: res.timezone,
 
     stationId: res.sys?.id,
     stationIndex: res.sys?.type,

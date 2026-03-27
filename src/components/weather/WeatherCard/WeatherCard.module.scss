@@ -106,6 +106,46 @@
           font-weight: 700;
           color: #585e65ff;
         }
+
+        .feelslike-minmax {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .feelslike-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ff8f33ff;
+
+            .feelslike-text {
+              white-space: pre-line;
+              font-size: 20px;
+              line-height: 28px;
+              font-weight: 700;
+              color: #171a1cff;
+            }
+          }
+
+          .minmax-container {
+            display: flex;
+
+            .temp-text-max,
+            .temp-text-min {
+              font-size: 14px;
+              line-height: 20px;
+              font-weight: 500;
+            }
+
+            .temp-text-max {
+              color: #d9534fff;
+            }
+
+            .temp-text-min {
+              color: #585e65ff;
+            }
+          }
+        }
       }
 
       .divider {

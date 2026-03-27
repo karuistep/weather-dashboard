@@ -3,6 +3,7 @@ import MapPinIcon from '@/assets/Icon/lucide-MapPin-Outlined.svg?react';
 import MapIcon from '@/assets/Icon/lucide-Map-Outlined.svg?react';
 import ExternalLinkIcon from '@/assets/Icon/lucide-ExternalLink-Outlined.svg?react';
 import TempIcon from '../../../assets/Visily-Export-to-Image-cloud-sun-2026-03-20.png';
+import ThermometerIcon from '../../../assets/Icon/lucide-Thermometer-Outlined.svg?react';
 
 import styles from './WeatherCard.module.scss';
 
@@ -49,7 +50,24 @@ export function WeatherCard({ weather }: Props) {
             <span className={styles['unit-text']}>CELCIUS</span>
           </div>
           <div className={styles.divider}></div>
-          <div className={styles['temperature-container']}></div>
+          <div className={styles['temperature-container']}>
+            <div className={styles['feelslike-minmax']}>
+              <div className={styles['feelslike-container']}>
+                <ThermometerIcon width={11} height={11} />
+                <div className={styles['feelslike-text']}>
+                  {`FEELS\nLIKE\n${weather.feelsLike}°`}
+                </div>
+              </div>
+              <div className={styles['minmax-container']}>
+                <span
+                  className={styles['temp-text-max']}
+                >{`H: ${weather.tempMax}°`}</span>
+                <span
+                  className={styles['temp-text-min']}
+                >{`•L: ${weather.tempMin}°`}</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className={styles['card-footer']}>3</div>

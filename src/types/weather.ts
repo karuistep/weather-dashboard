@@ -10,7 +10,9 @@ export interface Weather {
   tempMin?: number;
   tempMax?: number;
 
+  conditionId: number;
   condition: string;
+  icon: string;
 
   humidity: number;
   pressure: number;
@@ -27,6 +29,7 @@ export interface Weather {
   sunset?: number;
 
   localTime?: number;
+  timezone?: number;
 
   stationId?: number;
   stationIndex?: number;
