@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 import { useWeather } from '../../hooks/useWeather';
-import { mapCondition, mapHumidity, mapWind } from '../../domain/weather.rules';
+import { mapCondition, mapHumidity, mapWind } from '../../domain/weather/weather.rules';
 import { SearchBar } from '../../components/SearchBar/SearchBar';
 import { WeatherCard } from '../../components/weather/WeatherCard/WeatherCard';
 import NoData from '../../components/NoData';

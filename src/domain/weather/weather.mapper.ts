@@ -1,4 +1,5 @@
-import type { Weather, WeatherResponse } from '../types/weather';
+import type { Weather } from './weather.model';
+import type { WeatherResponse } from '../../services/weather/weather.types';
 
 export function mapWeatherResponseToWeather(res: WeatherResponse): Weather {
   const weather = res.weather[0];

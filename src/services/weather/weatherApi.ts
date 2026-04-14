@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { API_CONFIG } from '../constants/api';
-import type { WeatherResponse } from '../types/weather';
+import { API_CONFIG } from '../../constants/api';
+import type { WeatherResponse } from './weather.types';
 
 const BASE_URL = API_CONFIG.BASE_URL;
 const API_KEY = import.meta.env.VITE_WEATHER_KEY;
